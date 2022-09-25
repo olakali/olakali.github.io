@@ -1,0 +1,8 @@
+# main links
+main:
+  - title: "Projects"
+    url: _pages/projects
+  - title: "Publications"
+    url: _pages/publications
+  # - title: "Personal"
+  #   url: _pages/personal
