@@ -1,45 +1,43 @@
-<head>
-  <meta charset="utf-8">
 
-  {% include seo.html %}
+<meta charset="utf-8">
 
-  <link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+{% include seo.html %}
 
-  <!-- https://t.co/dKP3o1e -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
 
-  <script>
-    document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
-  </script>
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- For all browsers -->
-  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
 
-  <!--[if IE]>
-    <style>
-      /* old IE unsupported flexbox fixes */
-      .greedy-nav .site-title {
-        padding-right: 3em;
-      }
-      .greedy-nav button {
-        position: absolute;
-        top: 0;
-        right: 0;
-        height: 100%;
-      }
-    </style>
-  <![endif]-->
+<!-- For all browsers -->
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 
-  {% if site.head_scripts %}
-    {% for script in site.head_scripts %}
-      {% if script contains "://" %}
-        {% capture script_path %}{{ script }}{% endcapture %}
-      {% else %}
-        {% capture script_path %}{{ script | relative_url }}{% endcapture %}
-      {% endif %}
-      <script src="{{ script_path }}"></script>
-    {% endfor %}
+<!--[if IE]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
 
-  {% endif %}
-  <meta name="google-site-verification" content="6UU2fS3zL7clPu1g10sw2X5IkzclvUMeyD7nTcNNj_M" />
-</head>
+{% if site.head_scripts %}
+  {% for script in site.head_scripts %}
+    {% if script contains "://" %}
+      {% capture script_path %}{{ script }}{% endcapture %}
+    {% else %}
+      {% capture script_path %}{{ script | relative_url }}{% endcapture %}
+    {% endif %}
+    <script src="{{ script_path }}"></script>
+  {% endfor %}
+
+{% endif %}
