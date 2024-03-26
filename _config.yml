@@ -110,9 +110,9 @@ analytics:
 author:
   name             : "Ola Kalinowska"
   avatar           : "/assets/images/OlaKalinowska.jpg"
-  bio              : "PhD Candidate"
+  bio              : "Software Engineer"
   location         : "Chicago, USA"
-  email            : # "anapervan@u.northwestern.edu"
+  email            : # 
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
